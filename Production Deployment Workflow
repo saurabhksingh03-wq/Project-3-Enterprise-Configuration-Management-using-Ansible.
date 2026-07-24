@@ -1,0 +1,55 @@
+Developer
+
+     │
+
+Git Push
+
+     │
+
+     ▼
+
+GitHub Repository
+
+     │
+
+     ▼
+
+Jenkins Pipeline
+
+     │
+
+     ▼
+
+Ansible Playbook
+
+     │
+
+     ▼
+
+Ansible Master
+
+     │
+
+────────┼──────────────
+
+        ▼
+
+      Web01
+
+Install Apache
+
+Deploy Website
+
+Restart Apache (Handler)
+
+────────┼──────────────
+
+        ▼
+
+      Web02
+
+Install Apache
+
+Deploy Website
+
+Restart Apache (Handler)
