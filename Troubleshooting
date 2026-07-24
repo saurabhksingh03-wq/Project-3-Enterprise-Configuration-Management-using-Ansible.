@@ -1,0 +1,89 @@
+1. Passwordless SSH Failed
+Error
+Permission denied (publickey)
+
+Cause
+SSH public key was not present in the managed node's authorized_keys file.
+
+Resolution
+Generated an SSH key pair on the Ansible Master.
+Copied the public key to the managed nodes.
+Verified SSH connectivity using:
+ssh ec2-user@<private-ip>
+
+
+2. Host Key Verification Failed
+Error
+Host key verification failed
+
+Cause
+A stale or mismatched host key existed in ~/.ssh/known_hosts.
+
+Resolution
+Removed the old host key and accepted the new fingerprint.
+ssh-keygen -R <private-ip>
+
+Verified using:
+ssh -v ec2-user@<private-ip>
+
+
+3. Inventory Not Working
+Error
+No hosts matched
+
+Cause
+Incorrect inventory configuration or group name mismatch.
+
+Resolution
+Validated the inventory:
+ansible-inventory -i inventory --list
+
+
+4. YAML Indentation Error
+Error
+did not find expected '-' indicator
+
+Cause
+Incorrect indentation in the playbook.
+
+Resolution
+Used two-space indentation consistently.
+Verified syntax before execution.
+ansible-playbook --syntax-check site.yml
+
+
+5. Handler Not Running
+Issue
+Apache did not restart after playbook execution.
+
+Cause
+No changes were detected in the template task, so notify was not triggered.
+
+Resolution
+Modified the template, reran the playbook, and confirmed the handler executed only when changes occurred.
+
+6. Role Not Found
+Error
+The role 'users' was not found
+
+Cause
+The role was referenced in site.yml but had not been created.
+
+Resolution
+Created the role:
+ansible-galaxy init roles/users
+
+
+7. Template Module Error
+Issue
+The template could not be found.
+
+Cause
+Incorrect path used inside the role.
+
+Incorrect
+src: ../templates/index.html.j2
+
+Correct
+src: index.html.j2
+Within a role, Ansible automatically searches the role's templates/ directory.
