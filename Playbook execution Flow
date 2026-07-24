@@ -1,0 +1,61 @@
+Developer
+
+      │
+
+      ▼
+
+ansible-playbook site.yml
+
+      │
+
+      ▼
+
+Inventory
+
+      │
+
+      ▼
+
+Load Variables
+
+      │
+
+      ▼
+
+Execute Roles
+
+      │
+
+      ▼
+
+Apache Role
+
+      │
+
+      ▼
+
+Install Package
+
+      │
+
+      ▼
+
+Start Service
+
+      │
+
+      ▼
+
+Deploy Template
+
+      │
+
+      ▼
+
+Notify Handler
+
+      │
+
+      ▼
+
+Restart Apache (Only If Required)
