@@ -1,0 +1,27 @@
+site.yml
+
+      │
+
+      ▼
+
+apache Role
+
+      │
+
+      ├─────────────┐
+      │             │
+      ▼             ▼
+
+Tasks         Variables
+
+      │             │
+
+      ▼             ▼
+
+Templates      Handlers
+
+      │
+
+      ▼
+
+Deploy Website
