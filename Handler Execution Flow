@@ -1,0 +1,25 @@
+Template Task
+
+      │
+
+      ▼
+
+Did File Change?
+
+ ┌───────────────┐
+ │               │
+ ▼               ▼
+
+YES             NO
+
+ │               │
+
+ ▼               ▼
+
+Notify         Nothing
+
+ │
+
+ ▼
+
+Restart Apache Handler
